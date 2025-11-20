@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "./Productcard";
+import ProductCard from "./ProductCard";
 import glasses5 from "../assets/glasses5.jpg";
 import glasses6 from "../assets/glasses6.jpg";
 import glasses7 from "../assets/glasses7.jpg";
