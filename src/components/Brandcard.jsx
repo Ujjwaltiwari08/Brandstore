@@ -1,65 +1,99 @@
 import React from "react";
 import { FaShareAlt } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaAmazon } from "react-icons/fa";
 import logo from "../assets/logo.png";
 
 const BrandCard = () => {
   return (
-    <section className="bg-[#05006B] text-white p-4 w-full rounded-b-3xl sm:p-6 md:p-10">
-      <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-between sm:gap-0">
-        {/* Logo */}
-        <img
-          src={logo}
-          alt="Brand Logo"
-          className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full"
-        />
+    <section className="w-full text-white bg-[#05006B] rounded-b-none">
+      {/* 🔺 STICKY TOP SECTION */}
+      <div
+        className="
+          sticky top-0 z-50
+          bg-[#05006B]
+          p-5 pt-6
+        "
+      >
+        <div className="flex items-start justify-between w-full">
+          {/* LOGO + TITLE */}
+          <div className="flex items-center gap-4 ml-[-10px]">
+            <img
+              src={logo}
+              alt="Brand Logo"
+              className="w-16 h-16 rounded-full -mt-1 ml-[-2px]"
+            />
 
-        {/* Share Button */}
-        <button className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300">
-          <FaShareAlt size={16} className="sm:size-4 md:size-8" />
-        </button>
+            <div className="mt-0.5">
+              <h1 className="text-lg font-bold leading-tight -mt-1 ml-[-4px]">
+                The Lens Brand
+              </h1>
+
+              <p className="text-xs text-gray-300 whitespace-nowrap mt-0 ml-[-4px]">
+                we craft lens for all your need
+              </p>
+
+              <button
+                className="
+                  mt-1 bg-white text-black
+                  px-2 py-0.5 rounded-md
+                  text-[9px] font-medium
+                  flex items-center gap-1 shadow
+                "
+              >
+                thelensbrand.com <span>↗</span>
+              </button>
+            </div>
+          </div>
+
+          {/* SHARE BUTTON */}
+          <button
+            className="
+              w-8 h-11 rounded-full border border-white
+              flex items-center justify-center
+              hover:bg-white hover:text-black
+              transition-all
+              mr-[-6px] mt-2
+            "
+          >
+            <FaShareAlt size={16} />
+          </button>
+        </div>
       </div>
 
-      {/* Brand Info */}
-      <h1 className="text-xl sm:text-2xl md:text-4xl font-bold mt-3 text-center">
-        The Lens Brand
-      </h1>
-      <p className="text-xs sm:text-sm md:text-base text-gray-300 mt-1 text-center">
-        we craft lens for all your need
-      </p>
-
-      {/* Website Link Box */}
-      <button className="mt-3 bg-white text-black px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 rounded-xl text-xs sm:text-sm md:text-base flex items-center gap-1 sm:gap-2">
-        thelensbrand.com
-        <span>↗</span>
-      </button>
-
-      {/* Bottom Row */}
-      <div className="flex flex-col sm:flex-row items-center justify-between mt-5 gap-2 sm:gap-3">
+      {/* 🔻 NON-STICKY BOTTOM SECTION */}
+      <div className="p-5 pb-6">
         {/* Visit Store */}
-        <button className="flex items-center gap-0.5 bg-white text-black px-1 py-0.5 sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full shadow text-[10px] sm:text-xs md:text-sm">
-          <FaAmazon size={8} className="sm:size-4 md:size-8" />
-          <span>Visit Store</span>
-        </button>
+        <div className="flex items-center justify-between mt-4 w-full gap-4">
+          <button
+            className="
+              flex items-center gap-2
+              bg-white text-black px-2 py-1
+              rounded-full text-sm shadow ml-[-8px]
+            "
+          >
+            <FaAmazon size={20} />
+            <div className="flex flex-col leading-tight">
+              <span className="text-xs -mb-[2px]">visit</span>
+              <span className="text-xs -mt-[1px]">store</span>
+            </div>
+            <span className="text-xl font-light ml-1">›</span>
+          </button>
 
-        {/* Social Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-0.5 sm:gap-1 md:gap-2 bg-white text-black px-1 py-0.5 sm:px-2 sm:py-1 md:px-3 md:py-1.5 rounded-full shadow text-[10px] sm:text-xs md:text-sm">
-          <span>Follow us</span>
-          <FaInstagram
-            size={8}
-            className="text-pink-600 sm:size-4 md:size-8"
-          />
-          <FaSquareXTwitter
-            size={8}
-            className="text-black-400 sm:size-4 md:size-8"
-          />
-          <FaFacebookSquare
-            size={8}
-            className="text-blue-600 sm:size-4 md:size-8"
-          />
+          {/* Follow Us */}
+          <div
+            className="
+              flex items-center gap-1
+              bg-white text-black px-3 py-2
+              rounded-full shadow text-sm whitespace-nowrap mr-[-6px]
+            "
+          >
+            <span className="font-medium pl-1">Follow us</span>
+            <FaInstagram size={20} className="text-pink-600 pr-1" />
+            <FaSquareXTwitter size={20} className="pr-1" />
+            <FaFacebookSquare size={20} className="text-blue-600 pr-1" />
+          </div>
         </div>
       </div>
     </section>
@@ -67,3 +101,4 @@ const BrandCard = () => {
 };
 
 export default BrandCard;
+
