@@ -1,82 +1,73 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import { IoOptions } from "react-icons/io5";
 
 const Navbar = () => {
   return (
-    <nav className="
-      sticky top-0 w-full z-50
-      bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500
-      px-4 py-3
-      rounded-2xl shadow-lg
-      flex flex-col gap-3
-      mt-2
-      md:flex-row md:justify-between md:items-center md:px-8 md:py-4
-    ">
-      
-      {/* Brand Name */}
-      <h1 className="
-        text-xl font-extrabold text-white tracking-wide drop-shadow 
-        text-center 
-        md:text-3xl md:text-left
-      ">
-        The Lens Brand
-      </h1>
-
-      {/* BUTTONS SECTION */}
-      <div className="
-        flex gap-3 overflow-x-auto scrollbar-hide 
-        pb-2
-        md:pb-0 md:gap-4 md:text-lg md:flex-nowrap
-      ">
-
-        {/* Search Button */}
-        <button className="
-          bg-white text-blue-900 px-4 py-2 rounded-lg shadow
-          flex items-center gap-3 text-sm font-semibold
-          hover:bg-gray-100 transition
-          
-          md:px-8 md:py-3 md:rounded-xl md:text-xl
-        ">
-          <FaSearch className="text-blue-900" />
-          <span>Search</span>
-        </button>
-
-        {/* Trending */}
-        <button className="
-          bg-white text-blue-900 px-4 py-2 rounded-lg shadow 
+    <nav
+      className="
+         z-50 w-full
+        bg-white
+        px-4 py-3
+        shadow-md
+        flex items-center justify-between
+      "
+    >
+      {/* Search Buttoon (STATIC) */}
+      <button
+        className="
+          flex items-center gap-2
+          bg-gray-100 text-gray-800
+          px-3 py-1 rounded-xl
           text-sm font-semibold
-          hover:bg-gray-100 transition
+          shrink-0
+          hover:bg-gray-200 transition
+        "
+      >
+        <FaSearch className="text-gray-800" size={16} />
+        <span>Search</span>
+      </button>
 
-          md:px-8 md:py-3 md:rounded-xl md:text-xl
-        ">
+      {/*  Scrollab Buttons */}
+      <div
+        className="
+          flex gap-3 mx-3
+          overflow-x-auto scrollbar-hide
+          whitespace-nowrap
+          flex-1
+        "
+      >
+        <button className="bg-white text-gray-800 px-3 py-1 rounded-xl shadow text-sm font-semibold hover:bg-gray-100 transition">
           Trending
         </button>
 
-        {/* Popular */}
-        <button className="
-          bg-white text-blue-900 px-4 py-2 rounded-lg shadow 
-          text-sm font-semibold
-          hover:bg-gray-100 transition 
-
-          md:px-8 md:py-3 md:rounded-xl md:text-xl
-        ">
+        <button className="bg-white text-gray-800 px-3 py-1 rounded-xl shadow text-sm font-semibold hover:bg-gray-100 transition">
           Popular
         </button>
 
-        {/* Latest */}
-        <button className="
-          bg-white text-blue-900 px-4 py-2 rounded-lg shadow 
-          text-sm font-semibold
-          hover:bg-gray-100 transition 
-
-          md:px-8 md:py-3 md:rounded-xl md:text-xl
-        ">
-          Latest
+        <button className="bg-white text-gray-800 px-3 py-1 rounded-xl shadow text-sm font-semibold hover:bg-gray-100 transition">
+          Recommended
         </button>
 
+        <button className="bg-white text-gray-800 px-3 py-1 rounded-xl shadow text-sm font-semibold hover:bg-gray-100 transition">
+          Latest
+        </button>
       </div>
+
+      {/* Static Icon */}
+      <button
+        className="
+          bg-gray-100 text-gray-800
+          px-3 py-3 rounded-full
+          shrink-0
+          hover:bg-gray-200 transition
+        "
+      >
+        <IoOptions size={16} />
+      </button>
     </nav>
   );
 };
 
 export default Navbar;
+
