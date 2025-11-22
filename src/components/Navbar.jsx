@@ -6,64 +6,71 @@ const Navbar = () => {
   return (
     <nav
       className="
-         z-50 w-full
+        w-full z-40
         bg-white
         px-4 py-3
-        shadow-md
+        rounded-t-2xl rounded-b-3xl
+        shadow-lg
         flex items-center justify-between
+        -mt-4         /*Blue section ke andar overlap */
+        relative
       "
     >
-      {/* Search Buttoon (STATIC) */}
+      {/* Search Button (STATIC) */}
       <button
         className="
           flex items-center gap-2
-          bg-gray-100 text-gray-800
-          px-3 py-1 rounded-xl
+          bg-gray-5 text-gray-800
+          px-4 py-2 rounded-2xl
           text-sm font-semibold
           shrink-0
           hover:bg-gray-200 transition
+          shadow-sm
         "
       >
-        <FaSearch className="text-gray-800" size={16} />
-        <span>Search</span>
+        <FaSearch className="text-gray-700" size={16} />
+        <span className="text-[13px]">Search</span>
       </button>
 
-      {/*  Scrollab Buttons */}
+      {/* Scrollable Buttons */}
       <div
         className="
           flex gap-3 mx-3
-          overflow-x-auto scrollbar-hide
-          whitespace-nowrap
-          flex-1
+          overflow-x-auto whitespace-nowrap
+          scrollbar-hide
+          flex-1 rounded-b-2xl rounded-t-2xl
+          py-1 px-2
+          bg-gray-50
         "
       >
-        <button className="bg-white text-gray-800 px-3 py-1 rounded-xl shadow text-sm font-semibold hover:bg-gray-100 transition">
+        <button className="bg-white text-gray-900 px-4 py-2 rounded-2xl shadow text-sm font-semibold hover:bg-gray-100 transition">
           Trending
         </button>
 
-        <button className="bg-white text-gray-800 px-3 py-1 rounded-xl shadow text-sm font-semibold hover:bg-gray-100 transition">
+        <button className="bg-white text-gray-900 px-4 py-2 rounded-2xl shadow text-sm font-semibold hover:bg-gray-100 transition">
           Popular
         </button>
 
-        <button className="bg-white text-gray-800 px-3 py-1 rounded-xl shadow text-sm font-semibold hover:bg-gray-100 transition">
+        <button className="bg-white text-gray-900 px-4 py-2 rounded-2xl shadow text-sm font-semibold hover:bg-gray-100 transition">
           Recommended
         </button>
 
-        <button className="bg-white text-gray-800 px-3 py-1 rounded-xl shadow text-sm font-semibold hover:bg-gray-100 transition">
+        <button className="bg-white text-gray-900 px-4 py-2 rounded-2xl shadow text-sm font-semibold hover:bg-gray-100 transition">
           Latest
         </button>
       </div>
 
-      {/* Static Icon */}
+      {/* Filter Icon */}
       <button
         className="
-          bg-gray-100 text-gray-800
+          bg-gray-5 text-gray-800
           px-3 py-3 rounded-full
           shrink-0
           hover:bg-gray-200 transition
+          shadow-sm
         "
       >
-        <IoOptions size={16} />
+        <IoOptions size={18} />
       </button>
     </nav>
   );
