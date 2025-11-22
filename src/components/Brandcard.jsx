@@ -3,26 +3,26 @@ import { FaShareAlt } from "react-icons/fa";
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaAmazon } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import origlogo from "../assets/origlogo.png";
 
 const BrandCard = () => {
   return (
     <section className="w-full text-white bg-[#05006B] rounded-b-none">
-      {/* 🔺 STICKY TOP SECTION */}
+      {/* FIXED TOP SECTION */}
       <div
         className="
-          sticky top-0 z-50
-          bg-[#05006B]
-          p-5 pt-6
+          fixed top-3 rounded-b-4xl rounded-t-4xl left-0 w-full
+          bg-[#05006B] z-50
+          p-3 pt-2 pb-2
         "
       >
         <div className="flex items-start justify-between w-full">
-          {/* LOGO + TITLE */}
+          {/* LOGO + TITLE website */}
           <div className="flex items-center gap-4 ml-[-10px]">
             <img
-              src={logo}
+              src={origlogo}
               alt="Brand Logo"
-              className="w-16 h-16 rounded-full -mt-1 ml-[-2px]"
+              className="w-16 h-16 rounded-full -mt-1 ml-[8px]"
             />
 
             <div className="mt-0.5">
@@ -54,7 +54,7 @@ const BrandCard = () => {
               flex items-center justify-center
               hover:bg-white hover:text-black
               transition-all
-              mr-[-6px] mt-2
+              mr-[4px] mt-2
             "
           >
             <FaShareAlt size={16} />
@@ -62,8 +62,8 @@ const BrandCard = () => {
         </div>
       </div>
 
-      {/* 🔻 NON-STICKY BOTTOM SECTION */}
-      <div className="p-5 pb-6">
+      {/* NON-STICKY BOTTOM SECTION */}
+      <div className="p-5 pb-6 pt-[110px]">
         {/* Visit Store */}
         <div className="flex items-center justify-between mt-4 w-full gap-4">
           <button
